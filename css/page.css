@@ -3,7 +3,7 @@
 :root {
     /* dimensions */
     --header-height: 3rem;
-    --footer-height: 1.5rem;
+    --footer-height: 2rem;
     --main-height: calc(100vh - var(--header-height) - var(--footer-height));
 
     /* colors */
@@ -42,6 +42,7 @@ header {
     width: 100%;
     top: 0;
     height: var(--header-height);
+    padding: 0.5rem;
 }
 
 /* Main Area and Grid */
@@ -72,8 +73,15 @@ main {
 
 .pixel {
     background-color: var(--pixel-color);
+    opacity: 5%;
     aspect-ratio: 1 / 1;
     width: 6.25%; /* 1/16 of the container */
+    border: 1px solid var(--back-color);
+    border-radius: 5px;
+}
+
+.pixel.on {
+    opacity: 100%;
 }
 
 /* Footer */
@@ -83,4 +91,5 @@ footer {
     width: 100%;
     bottom: 0;
     height: var(--footer-height);
+    padding: 0.5rem;
 }
