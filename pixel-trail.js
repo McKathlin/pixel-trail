@@ -40,6 +40,19 @@ PixelTrail.turnOnPixel = function(pixelNode) {
     pixelNode.classList.add("on");
 };
 
+PixelTrail.darkenPixel = function(pixelNode) {
+    if (!pixelNode.classList.contains("pixel")) {
+        return; // This method is for pixel nodes only.
+    }
+
+    // Increase the opacity by 10%
+    let opacity = Number.parseFloat(pixelNode.style.opacity || "0");
+    if (opacity < 1) {
+        opacity += 0.1;
+        pixelNode.style.opacity = opacity;
+    }
+}
+
 //=============================================================================
 // Setup
 //=============================================================================
@@ -52,10 +65,12 @@ PixelTrail.resetGrid(
 );
 
 PixelTrail.gridContainer.addEventListener("mouseover", (event) => {
-    if (event.target.classList.contains("pixel")) {
-        PixelTrail.turnOnPixel(event.target);
-    }
+    PixelTrail.darkenPixel(event.target);
 });
+
+PixelTrail.gridContainer.addEventListener("click", (event) => {
+    PixelTrail.darkenPixel(event.target);
+})
 
 //-----------------------------------------------------------------------------
 // Grid Reset Controls

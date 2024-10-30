@@ -22,12 +22,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
 }
 
 body {
     color: var(--pixel-color);
     background-color: var(--back-color);
-    font-family:'Courier New', Courier, monospace;
     text-align: center;
 }
 
@@ -58,7 +58,7 @@ header fieldset {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.6rem;
 }
 
 header #reset-options > input {
@@ -66,7 +66,7 @@ header #reset-options > input {
 }
 
 header #reset-options input {
-    width: 3rem;
+    width: 3.5rem;
     font-size: 1.2rem;
 }
 
@@ -103,13 +103,13 @@ main {
 
 .pixel {
     background-color: var(--pixel-color);
-    opacity: 5%;
+    opacity: 0.0;
     aspect-ratio: 1 / 1;
     min-width: 1px;
 }
 
 .pixel.on {
-    opacity: 100%;
+    opacity: 1.0;
 }
 
 /* Footer */
