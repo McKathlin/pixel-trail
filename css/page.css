@@ -1,0 +1,22 @@
+:root {
+    --light-color: #bca;
+    --dark-color: #121;
+    --link-color: #dcb;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+a {
+    color: var(--link-color);
+}
