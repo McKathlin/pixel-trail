@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Trail</title>
     <link rel="stylesheet" href="css/page.css">
-    <script src="pixel-trail.js"></script>
+    <script defer src="pixel-trail.js"></script>
 </head>
 <body>
     <header>
         <h1>Pixel Trail</h1>
+        <fieldset id="reset-options">
+            <label for="grid-width">Width:
+                <input id="grid-width" type="number">
+            </label>
+            <label for="grid-height">Height:
+                <input id="grid-height" type="number">
+            </label>
+            <button id="reset">Reset Grid</button>
+        </fieldset>
     </header>
     <main>
         <div id="pixel-container">

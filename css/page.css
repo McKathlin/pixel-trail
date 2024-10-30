@@ -38,11 +38,40 @@ a {
 /* Header */
 
 header {
+    /* sizing */
     position: fixed;
     width: 100%;
     top: 0;
     height: var(--header-height);
-    padding: 0.5rem;
+
+    /* content arrangement */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5vw;
+}
+
+header fieldset {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header #reset-options > input {
+    height: 2rem;
+}
+
+header #reset-options input {
+    width: 3rem;
+    font-size: 1.2rem;
+}
+
+header #reset-options button {
+    padding: 3px;
 }
 
 /* Main Area and Grid */
@@ -65,6 +94,7 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    border: 1px solid var(--pixel-color);
 }
 
 #pixel-container p {
@@ -75,9 +105,7 @@ main {
     background-color: var(--pixel-color);
     opacity: 5%;
     aspect-ratio: 1 / 1;
-    width: 6.25%; /* 1/16 of the container */
-    border: 1px solid var(--back-color);
-    border-radius: 5px;
+    min-width: 1px;
 }
 
 .pixel.on {
